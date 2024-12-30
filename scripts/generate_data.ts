@@ -14,7 +14,9 @@ const allData: any[] = [];
 
 for (const filename of FILENAMES) {
   const data = await fetch(`${BASE}/${filename}`).then((r) => r.text());
-  allData.push(...JSON.parse(data));
+  const arr = JSON.parse(data);
+  allData.push(...arr);
+  allData.push(...arr.flatMap((obj: any) => obj.skills ?? []));
   await Bun.write(`${TARGET_PATH}/${filename}`, data);
 }
 
