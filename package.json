@@ -1,0 +1,14 @@
+{
+  "name": "@gi-tcg/assets-beta",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "bun scripts/generate_data.ts"
+  },
+  "devDependencies": {
+    "@gi-tcg/static-data": "^0.16.1",
+    "@types/bun": "^1.1.14",
+    "vercel": "^39.2.2"
+  }
+}
