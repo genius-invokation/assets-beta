@@ -1,5 +1,5 @@
 // @ts-check
-import rawData from "../../../data/image_names.json";
+import rawData from "../../../data/image_names.json" with { type: "json" };
 
 /**
  * @typedef {import("@vercel/node").VercelRequest} VercelRequest

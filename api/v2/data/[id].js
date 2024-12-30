@@ -1,8 +1,8 @@
 // @ts-check
-import characters_ from "../../../data/characters.json";
-import actionCards_ from "../../../data/action_cards.json";
-import entities_ from "../../../data/entities.json";
-import keywords_ from "../../../data/keywords.json";
+import characters_ from "../../../data/characters.json" with { type: "json" };
+import actionCards_ from "../../../data/action_cards.json" with { type: "json" };
+import entities_ from "../../../data/entities.json" with { type: "json" };
+import keywords_ from "../../../data/keywords.json" with { type: "json" };
 
 /**
  * @typedef {import("@gi-tcg/static-data").CharacterRawData} CharacterRawData
