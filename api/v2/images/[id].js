@@ -28,6 +28,11 @@ export default function handler(req, res) {
       .send("Not found");
     return;
   }
-  const url = `https://api.hakush.in/gi/UI/${image}.webp`;
+  let url;
+  if (image.includes("CardFace")) {
+    url = `https://api.hakush.in/gi/UI/${image}.webp`;
+  } else {
+    url = `https://assets.gi-tcg.guyutongxue.site/assets/${image}.webp?thumb=${thumb}`;
+  }
   res.status(307).setHeader("Location", url).send(void 0);
 }
