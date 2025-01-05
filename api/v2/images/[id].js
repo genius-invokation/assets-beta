@@ -28,8 +28,11 @@ export default function handler(req, res) {
       .send("Not found");
     return;
   }
+  const hakushinNotProvidedIds = [
+    300006
+  ];
   let url;
-  if (image.includes("CardFace")) {
+  if (!hakushinNotProvidedIds.includes(Number(id)) && image.includes("CardFace")) {
     url = `https://api.hakush.in/gi/UI/${image}.webp`;
   } else {
     url = `https://assets.gi-tcg.guyutongxue.site/assets/${thumb ? 'thumbs/' : '' }${image}.webp`;
