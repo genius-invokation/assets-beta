@@ -1,13 +1,10 @@
 // @ts-check
-import rawData from "../../../data/image_names.json" with { type: "json" };
+import { imageMap } from "../images.js";
 
 /**
  * @typedef {import("@vercel/node").VercelRequest} VercelRequest
  * @typedef {import("@vercel/node").VercelResponse} VercelResponse
  */
-
-/** @type {Record<string, string>} */
-const imageMap = rawData;
 
 /**
  *
