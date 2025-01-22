@@ -59,3 +59,5 @@ export const all = [
 export default function handler(req, res) {
   return res.status(200).json(all);
 }
+
+export { keywords };

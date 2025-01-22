@@ -1,5 +1,5 @@
 // @ts-check
-import { all } from "../data.js";
+import { all, keywords } from "../data.js";
 
 /**
  * @typedef {import("@vercel/node").VercelRequest} VercelRequest
@@ -14,7 +14,17 @@ import { all } from "../data.js";
  */
 export default function handler(req, res) {
   const { id } = req.query;
-  const found = all.find((obj) => obj.id === Number(id));
+  if (Array.isArray(id)) {
+    res.status(400)
+      .send("Bad request (multiple id)");
+    return;
+  }
+  let found;
+  if (id.startsWith("K")) {
+    found = keywords.find((obj) => obj.id === Number(id.slice(1)));
+  } else {
+    found = all.find((obj) => obj.id === Number(id));
+  }
   if (found) {
     res.status(200).json(found);
     return;
