@@ -13,8 +13,12 @@ const missingImages = [
   "UI_Gcg_CardFace_Modify_Vehicle_LangChuan",
   "UI_Gcg_CardFace_Assist_Location_YanmiZhu",
   "UI_Gcg_CardFace_Char_Avatar_Kachina",
-  "UI_Gcg_CardFace_Char_Avatar_Emilie"
-]
+  "UI_Gcg_CardFace_Char_Avatar_Emilie",
+  "UI_Gcg_CardFace_Summon_Emilie_1",
+  "UI_Gcg_CardFace_Summon_Emilie_2",
+  "UI_Gcg_CardFace_Summon_Emilie_3",
+  "UI_Gcg_CardFace_Summon_Kachina",
+];
 
 /**
  * @typedef {import("@vercel/node").VercelRequest} VercelRequest
