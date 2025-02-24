@@ -47,8 +47,11 @@ export default async function handler(req, res) {
     url = `https://assets.gi-tcg.guyutongxue.site/assets/${
       thumb ? "thumbs/" : ""
     }${image}.webp`;
-  } else {
+  } else if (image.includes("CardFace")) {
     url = `https://api.hakush.in/gi/UI/${image}.webp`;
+  } else {
+    res.status(404).send("Not found");
+    return;
   }
   res
     .status(307)
