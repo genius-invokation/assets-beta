@@ -13,7 +13,11 @@ const FILENAMES = [
 const allData: any[] = [];
 
 for (const filename of FILENAMES) {
-  const data = await fetch(`${BASE}/${filename}`).then((r) => r.text());
+  const data = await fetch(`${BASE}/${filename}`, {
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+    }
+  }).then((r) => r.text());
   const arr = JSON.parse(data);
   allData.push(...arr);
   allData.push(...arr.flatMap((obj: any) => obj.skills ?? []));
