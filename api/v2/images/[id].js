@@ -6,6 +6,7 @@ const mainImagesPromise = fetch(
 ).then((r) => r.json());
 
 const missingImages = [
+  "UI_Gcg_CardFace_Summon_Xilonen"
 ];
 
 /**
