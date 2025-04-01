@@ -1,27 +1,24 @@
-
 const BASE = `https://raw.githubusercontent.com/genius-invokation/genius-invokation-beta/refs/heads/beta/packages/static-data/src/data`;
 
 const TARGET_PATH = `${import.meta.dirname}/../data`;
 
-const FILENAMES = [
-  "action_cards.json",
-  "characters.json",
-  "entities.json",
-  "keywords.json"
-];
+const FILENAMES = ["action_cards", "characters", "entities", "keywords"];
 
 const allData: any[] = [];
 
 for (const filename of FILENAMES) {
-  const data = await fetch(`${BASE}/${filename}`, {
+  const data = await fetch(`${BASE}/${filename}.json`, {
     headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
-    }
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    },
   }).then((r) => r.text());
-  const arr = JSON.parse(data);
+  const arr = JSON.parse(data).map((src: any) => ({
+    ...src,
+    category: filename,
+  }));
   allData.push(...arr);
   allData.push(...arr.flatMap((obj: any) => obj.skills ?? []));
-  await Bun.write(`${TARGET_PATH}/${filename}`, data);
+  await Bun.write(`${TARGET_PATH}/${filename}.json`, data);
 }
 
 const result: Record<number, string> = {
@@ -40,7 +37,6 @@ const replaceNameMap: Record<string, string> = {
   UI_Gcg_CardFace_Char_Monster_Effigyice:
     "UI_Gcg_CardFace_Char_Monster_EffigyIce",
 };
-
 
 // 召唤物、角色牌、行动牌
 for (const obj of allData) {
@@ -64,4 +60,7 @@ for (const obj of allData) {
   }
 }
 
-await Bun.write(`${TARGET_PATH}/image_names.json`, JSON.stringify(result, null, 2));
+await Bun.write(
+  `${TARGET_PATH}/image_names.json`,
+  JSON.stringify(result, null, 2),
+);
