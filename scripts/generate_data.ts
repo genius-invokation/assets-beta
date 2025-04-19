@@ -18,7 +18,7 @@ for (const filename of FILENAMES) {
   }));
   allData.push(...arr);
   allData.push(...arr.flatMap((obj: any) => obj.skills ?? []));
-  await Bun.write(`${TARGET_PATH}/${filename}.json`, data);
+  await Bun.write(`${TARGET_PATH}/${filename}.json`, JSON.stringify(arr));
 }
 
 const result: Record<number, string> = {
