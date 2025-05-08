@@ -6,7 +6,15 @@ const mainImagesPromise = fetch(
 ).then((r) => r.json());
 
 const missingImages = [
-  "UI_Gcg_CardFace_Summon_Xilonen"
+  "UI_Gcg_CardFace_Summon_Chasca_Elec",
+  "UI_Gcg_CardFace_Summon_Chasca_Fire",
+  "UI_Gcg_CardFace_Summon_Chasca_Gun",
+  "UI_Gcg_CardFace_Summon_Chasca_Ice",
+  "UI_Gcg_CardFace_Summon_Chasca_Water",
+  "UI_Gcg_CardFace_Summon_Chasca_Wind",
+  "UI_Gcg_CardFace_Summon_Mavuika_Land",
+  "UI_Gcg_CardFace_Summon_Mavuika_Sea",
+  "UI_Gcg_CardFace_Summon_Mavuika_Sky",
 ];
 
 /**
