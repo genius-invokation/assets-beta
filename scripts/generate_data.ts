@@ -1,3 +1,5 @@
+import { Glob } from "bun";
+
 const BASE = `https://raw.githubusercontent.com/genius-invokation/genius-invokation-beta/refs/heads/beta/packages/static-data/src/data`;
 
 const TARGET_PATH = `${import.meta.dirname}/../data`;
@@ -63,4 +65,15 @@ for (const obj of allData) {
 await Bun.write(
   `${TARGET_PATH}/image_names.json`,
   JSON.stringify(result, null, 2),
+);
+
+await Bun.write(
+  `${TARGET_PATH}/extra_images.json`,
+  JSON.stringify(
+    await Array.fromAsync(
+      new Glob(`*.png`).scan(`${import.meta.dirname}/../public/assets`),
+    ),
+    null,
+    2,
+  ),
 );

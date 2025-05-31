@@ -7,7 +7,7 @@
     "build": "bun scripts/generate_data.ts"
   },
   "devDependencies": {
-    "@gi-tcg/static-data": "^0.16.1",
+    "@gi-tcg/static-data": "^0.17.1",
     "@types/bun": "^1.1.14",
     "vercel": "^39.2.2"
   }
