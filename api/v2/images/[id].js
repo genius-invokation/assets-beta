@@ -31,7 +31,7 @@ const alImageMap = {
   115113: "UI_Gcg_CardFace_Summon_Chasca_Wind",
   115114: "UI_Gcg_CardFace_Summon_Chasca_Fire",
   115115: "UI_Gcg_CardFace_Summon_Chasca_Water",
-  115115: "UI_Gcg_CardFace_Summon_Chasca_Elec",
+  115116: "UI_Gcg_CardFace_Summon_Chasca_Elec",
   115117: "UI_Gcg_CardFace_Summon_Chasca_Ice",
   1151121: "Skill_S_Chasca_02",
   301306: "UI_Gcg_Buff_Vehicle_SaurusBaby",
