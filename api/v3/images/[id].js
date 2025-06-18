@@ -56,6 +56,7 @@ const dataIncludesElements = [
     "UI_Gcg_Buff_Common_Element_Wind",
     "UI_Gcg_Buff_Common_Element_Rock",
     "UI_Gcg_Buff_Common_Element_Grass",
+    "UI_Gcg_Buff_Common_Element_Piercing", // not exists
     "UI_Gcg_Buff_Common_Element_Heal",
   ].map((icon, id) => ({ id, icon })),
   ...Object.entries(MISSING_ICONS).map(([id, icon]) => ({
