@@ -8,41 +8,24 @@ import extraImages from "../../../data/extra_images.json" with { type: "json" };
  */
 
 const MISSING_ICONS = {
-  11142: "Skill_S_Citlali_01",
-  11143: "Skill_E_Citlali_01_HD",
-  11144: "Skill_S_Citlali_02",
-  13152: "Skill_S_Mavuika_01",
-  13153: "Skill_E_Mavuika_01_HD",
-  13154: "Skill_S_Mavuika_06",
-  15112: "Skill_S_Chasca_01",
-  15113: "Skill_E_Chasca_01_HD",
-  15114: "Skill_S_Chasca_06",
-  1131541: "Skill_S_Mavuika_04",
-  1131551: "Skill_S_Mavuika_03",
-  1131561: "Skill_S_Mavuika_02",
-  1151121: "Skill_S_Chasca_02",
-  3130092: "Skill_GCG_SaurusBaby",
-  111141: "UI_Gcg_Buff_Nightsoul_Ice",
-  111142: "UI_Gcg_Buff_Citlali_Shiled",
-  111143: "UI_Gcg_Buff_Citlali_E1",
-  113151: "UI_Gcg_Buff_Nightsoul_Fire",
-  113152: "UI_Gcg_Buff_Mavuika_S",
-  113153: "UI_Gcg_Buff_Mavuika_E",
-  115111: "UI_Gcg_Buff_Nightsoul_Wind",
-  301306: "UI_Gcg_Buff_Vehicle_SaurusBaby",
-  303240: "UI_Gcg_Buff_Resurrection",
+  // 5.8
+  15122: "Skill_S_Lanyan_01",
+  15123: "Skill_E_Lanyan_01_HD",
+  115121: "UI_Gcg_Buff_Lanyan_E1",
+  15132: "Skill_S_Heizo_01",
+  15133: "Skill_E_Heizo_01_HD",
+  15134: "UI_Talent_S_Heizo_05",
+  115132: "UI_Gcg_Buff_Heizo_E1",  
+  115133: "UI_Gcg_DeBuff_Heizo_S",
+  115134: "UI_Gcg_DeBuff_Heizo_S",
+  115135: "UI_Gcg_DeBuff_Heizo_S",
+  115136: "UI_Gcg_DeBuff_Heizo_S",
+  27042: "MonsterSkill_S_HookwalkerPrimo_01",
+  27043: "MonsterSkill_E_HookwalkerPrimo_01_HD",
+  27044: "MonsterSkill_S_HookwalkerPrimo_02",
 };
 
 const MISSING_CARD_FACES = {
-  113154: "UI_Gcg_CardFace_Summon_Mavuika_Sky",
-  113155: "UI_Gcg_CardFace_Summon_Mavuika_Sea",
-  113156: "UI_Gcg_CardFace_Summon_Mavuika_Land",
-  115112: "UI_Gcg_CardFace_Summon_Chasca_Gun",
-  115113: "UI_Gcg_CardFace_Summon_Chasca_Wind",
-  115114: "UI_Gcg_CardFace_Summon_Chasca_Fire",
-  115115: "UI_Gcg_CardFace_Summon_Chasca_Water",
-  115116: "UI_Gcg_CardFace_Summon_Chasca_Elec",
-  115117: "UI_Gcg_CardFace_Summon_Chasca_Ice",
 };
 
 /**
@@ -73,6 +56,7 @@ const dataIncludesElements = [
     "UI_Gcg_Buff_Common_Element_Wind",
     "UI_Gcg_Buff_Common_Element_Rock",
     "UI_Gcg_Buff_Common_Element_Grass",
+    "UI_Gcg_Buff_Common_Element_Piercing", // not exists
     "UI_Gcg_Buff_Common_Element_Heal",
   ].map((icon, id) => ({ id, icon })),
   ...Object.entries(MISSING_ICONS).map(([id, icon]) => ({
