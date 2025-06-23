@@ -14,6 +14,9 @@ import { all, keywords } from "../data.js";
  * @returns
  */
 export default async function handler(req, res) {
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
   const { id } = req.query;
   if (Array.isArray(id)) {
     res.status(400).send("Bad request (multiple id)");
