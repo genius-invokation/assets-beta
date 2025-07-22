@@ -6,6 +6,10 @@
   "scripts": {
     "build": "bun scripts/generate_data.ts"
   },
+  "dependencies": {
+    "@gi-tcg/utils": "^0.16.4",
+    "sharp": "^0.33.5"
+  },
   "devDependencies": {
     "@gi-tcg/static-data": "^0.17.1",
     "@types/bun": "^1.1.14",

@@ -13,10 +13,10 @@ import keywords_ from "../../data/keywords.json" with { type: "json" };
  */
 
 /** @type {CharacterRawData[]} */
-const characters = characters_;
+export const characters = characters_;
 
 /** @type {ActionCardRawData[]} */
-const actionCards = actionCards_;
+export const actionCards = actionCards_;
 
 /** @type {EntityRawData[]} */
 const entities = /** @type {EntityRawData[]} */ (entities_);
