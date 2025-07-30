@@ -8,6 +8,20 @@ import extraImages from "../../../data/extra_images.json" with { type: "json" };
  */
 
 const MISSING_ICONS = {
+  // 6.0
+  14142:"Skill_S_Iansan_01",  
+  14143:"Skill_E_Iansan_01_HD",
+  14144:"UI_Talent_S_Iansan_08",
+  114141:"UI_Gcg_Buff_Nightsoul_Elec",
+  114142:"UI_Gcg_Buff_Iansan_S",
+  15142:"Skill_S_Mizuki_01",
+  15143:"Skill_E_Mizuki_01_HD",
+  115141:"UI_Gcg_Buff_Mizuki_S",
+  23052:"MonsterSkill_S_TheAbyssXiuhcoatl_01",
+  23053:"MonsterSkill_E_TheAbyssXiuhcoatl_01_HD",
+  23054:"MonsterSkill_S_TheAbyssXiuhcoatl_02",
+  123051:"UI_Gcg_Buff_TheAbyssXiuhcoatl_S",
+  
   // 5.8
   15122: "Skill_S_Lanyan_01",
   15123: "Skill_E_Lanyan_01_HD",
