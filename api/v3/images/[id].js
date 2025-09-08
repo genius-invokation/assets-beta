@@ -22,6 +22,27 @@ const MISSING_ICONS = {
   114142:"UI_Gcg_Buff_Iansan_S",
   115141:"UI_Gcg_Buff_Mizuki_S",
   123051:"UI_Gcg_Buff_TheAbyssXiuhcoatl_S",
+
+  // 6.1
+  15152: "Skill_S_Ifa_01",
+  15153: "Skill_E_Ifa_01_HD",
+  115151: "UI_Gcg_Buff_Nightsoul_Wind",
+  115152: "UI_Gcg_Buff_Vehicle_Ifa",
+  1151521: "Skill_S_Ifa_03",
+  115153: "UI_Gcg_DeBuff_Ifa_S",
+  115154: "UI_Gcg_DeBuff_Ifa_S",
+  115155: "UI_Gcg_DeBuff_Ifa_S",
+  115156: "UI_Gcg_DeBuff_Ifa_S",
+  14152: "Skill_S_Varesa_01",
+  14153: "Skill_E_Varesa_01_HD",
+  14154: "UI_Talent_S_Varesa_05",
+  114151: "UI_Gcg_Buff_Nightsoul_Elec",
+  114152: "UI_Gcg_Buff_Varesa_S",
+  114153: "UI_Gcg_Buff_Varesa_Q",
+  114154: "UI_Gcg_Buff_Varesa_E",
+  22062: "MonsterSkill_S_Narcissusborn_01",
+  22063: "MonsterSkill_E_Narcissusborn_01_HD",
+  22064: "MonsterSkill_S_Narcissusborn_02",
 };
 
 const MISSING_CARD_FACES = {
@@ -117,3 +138,4 @@ export default function handler(req, res) {
     .setHeader("Location", url)
     .send(void 0);
 }
+
